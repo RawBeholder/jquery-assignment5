@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment2</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <style>
+        *{
+            box-sizing: border-box;
+           
+        }
+        .container{
+            width:850px;
+            margin:auto;
+           padding:93px;
+        }
+        .item{
+            padding:8px 3px;
+            
+            margin:3px 1px;
+        }
+        #head{
+            width:99%;
+            float: left;
+            background-color: lightskyblue;
+        }
+        #sidebar{
+            width:32%;
+            float:left;
+            background-color: #ACDF87;
+            height:280px;
+        }
+        #mainc{
+            width:67%;
+            float:left;
+            background-color: #FCD12A;
+            height:200px;
+
+        }
+        #extrac{
+            width:67%;
+            float:right;
+            background-color: #9f9f9f;
+            height:74px;
+        }
+        #foot{
+            width:100%;
+            float:left;
+            background-color: darkorange;
+        }
+        p{
+            text-align: center;
+        }
+       
+.popup {
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    display:none;
+}
+ 
+
+.popup-content {
+    width: 664px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 40px;
+    margin-top: 100px;
+    border-radius: 3px;
+    background: black;
+    opacity:0.7;
+    position: relative;
+    height:431px;
+}
+ 
+
+.close-button {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    border-radius: 20px;
+    background: rgba(0,0,0,0.8);
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    text-decoration:none;
+
+}
+.close-button:hover{
+    cursor:pointer;
+}
+#txt{
+    color: #fff;
+    text-align: center;
+}
+ 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="head" class="item"><p>Header</p></div>
+        <div id="sidebar" class="item"><p id="sb">Sidebar</p></div>
+        <div id="mainc" class="item"><p>Main Content</p></div>
+        <div id="extrac" class="item"><p>Extra Content</p></div>
+        <footer id="foot" class="item"><p>Footer</p></footer>
+    </div>
+  
+        <div class="popup" popup-name="popup-1">
+            <div class="popup-content">
+            <h2>Title of Popup </h2>
+        <p><h1 id="txt">I am Pop-Up</h1></p>
+        <a class="close-button" popup-close="popup-1">X</a>
+            </div>
+        </div>  
+</body>
+<script>
+ 
+    // Open Popup
+   
+    $(function(){
+        $("#foot").click(function(){
+            $(".popup").fadeIn(300);
+        })
+
+        $(".close-button").click(function()
+        {
+            $(".popup").fadeOut(300);
+        })
+
+
+
+    });
+ 
+    
+ 
+ 
+   
+ 
+
+</script>
+</html>
